@@ -1,0 +1,10 @@
+//Sample CTT parameters derived from measured results of Harvard VLSI-Arch Group; "Fully-CMOS Multi-Level Embedded Non-Volatile Memory Devices With Reliable Long-Term Retention for Efficient Storage of Neural Network Weights", S. Ma et. al., Electronic Device Letters 2019
+
+-MemCellType: CTT
+
+-CellArea (F^2): 8
+-CellAspectRatio: 2
+
+-ReadMode: current
+
+-AccessType: None

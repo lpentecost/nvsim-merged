@@ -1,0 +1,38 @@
+//Sample FeFET settings derived from simulation efforts by Niemier Research Group at University of Notre Dame; see README for details
+
+-MemCellType: FeFET
+
+-CellArea (F^2): 10
+-CellAspectRatio: 1
+
+-ResistanceOnAtSetVoltage (ohm): 100000		 
+-ResistanceOffAtSetVoltage (ohm): 1000000000	 
+-ResistanceOnAtResetVoltage (ohm): 100000	
+-ResistanceOffAtResetVoltage (ohm): 10000000	
+-ResistanceOnAtReadVoltage (ohm): 1000000	
+-ResistanceOffAtReadVoltage (ohm): 10000000	
+-ResistanceOnAtHalfResetVoltage (ohm): 500000	
+
+-CapacitanceOn (F): 1e-16
+-CapacitanceOff (F): 1e-16
+
+-ReadMode: current
+-ReadVoltage (V): 0.05
+-ReadPower (uW): 0.125
+
+-ResetMode: voltage
+-ResetVoltage (V): 3.0
+-ResetPulse (ns): 1340
+-ResetEnergy (pJ): 0.00311
+
+-SetMode: voltage
+-SetVoltage (V): 3.0
+-SetPulse (ns): 1340
+-SetEnergy (pJ): 0.00311
+
+-AccessType: CMOS
+-VoltageDropAccessDevice (V): 0.01
+-AccessCMOSWidth (F): 0.01
+
+-ReadFloating: false
+
