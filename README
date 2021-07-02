@@ -5,7 +5,7 @@ Added support for MLC sensing for CTT, FeFET, ReRAM
 +Note: MLC relies on power-of-two scaled capacity values
 +Note: Can specify both nLvl for # programmed levels per MLC and nFingers to dictate the size (&resulting reliability) of MLC SA
 
-For additional details, please see [arxiv links for ISLPED pre-print and NVMExplorer]
+For additional details, please see [https://arxiv.org/abs/2106.11757 and nvmexplorer.seas.harvard.edu]
 
 Below are more details from NVSim README
 
