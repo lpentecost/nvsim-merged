@@ -102,7 +102,7 @@ enum BufferDesignTarget
 
 enum MemoryType
 {
-	data,
+	dataT,
 	tag,
 	CAM
 };

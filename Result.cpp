@@ -570,7 +570,7 @@ void Result::print() {
 
 
 void Result::printAsCache(Result &tagResult, CacheAccessMode cacheAccessMode) {
-	if (bank->memoryType != data || tagResult.bank->memoryType != tag) {
+	if (bank->memoryType != dataT || tagResult.bank->memoryType != tag) {
 		cout << "This is not a valid cache configuration." << endl;
 		return;
 	} else {
@@ -824,7 +824,7 @@ void Result::printToCsvFile(ofstream &outputFile) {
 }
 
 void Result::printAsCacheToCsvFile(Result &tagResult, CacheAccessMode cacheAccessMode, ofstream &outputFile) {
-	if (bank->memoryType != data || tagResult.bank->memoryType != tag) {
+	if (bank->memoryType != dataT || tagResult.bank->memoryType != tag) {
 		cout << "This is not a valid cache configuration." << endl;
 		return;
 	} else {

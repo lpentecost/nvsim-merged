@@ -100,7 +100,7 @@ void Mat::Initialize(int _numRowSubarray, int _numColumnSubarray, int _numAddres
 
 	/* Determine the number of rows in a subarray */
 	numRow = 1 << _numAddressBit;
-	if (memoryType == data)
+	if (memoryType == dataT)
 		numRow *= numWay;	/* Only for cache design that partitions a set into multiple rows */
 	numRow /= (muxSenseAmp * muxOutputLev1 * muxOutputLev2);	/* Distribute to column decoding */
 	if (numRow == 0) {
@@ -121,7 +121,7 @@ void Mat::Initialize(int _numRowSubarray, int _numColumnSubarray, int _numAddres
 		numColumn *= numWay;
 
         //Qing: for data array, numColumn must be times of 64b
-        if (memoryType == data && (numColumn % 64 > 0)) {
+        if (memoryType == dataT && (numColumn % 64 > 0)) {
 		invalid = true;
 		initialized = true;
 		return;

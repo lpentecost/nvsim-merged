@@ -300,7 +300,7 @@ int main(int argc, char *argv[])
 			/* To aggressive partitioning */
 			continue;
 		}
-		CALCULATE(dataBank, data);
+		CALCULATE(dataBank, dataT);
 		if (!dataBank->invalid) {
 			Result tempResult;
 			VERIFY_DATA_CAPACITY;
@@ -323,7 +323,7 @@ int main(int argc, char *argv[])
 					(bool)isLocalWireLowSwing);
 			for (int i = 0; i < (int)full_exploration; i++) {
 				LOAD_GLOBAL_WIRE(bestDataResults[i]);
-				TRY_AND_UPDATE(bestDataResults[i], data);
+				TRY_AND_UPDATE(bestDataResults[i], dataT);
 			}
 			if (inputParameter->optimizationTarget == full_exploration && !inputParameter->isPruningEnabled) {
 				OUTPUT_TO_FILE;
@@ -336,7 +336,7 @@ int main(int argc, char *argv[])
 					(bool)isGlobalWireLowSwing);
 			for (int i = 0; i < (int)full_exploration; i++) {
 				LOAD_LOCAL_WIRE(bestDataResults[i]);
-				TRY_AND_UPDATE(bestDataResults[i], data);
+				TRY_AND_UPDATE(bestDataResults[i], dataT);
 			}
 			if (inputParameter->optimizationTarget == full_exploration && !inputParameter->isPruningEnabled) {
 				OUTPUT_TO_FILE;
@@ -437,7 +437,7 @@ int main(int argc, char *argv[])
 				/* To aggressive partitioning */
 				continue;
 			}
-			CALCULATE(dataBank, data);
+			CALCULATE(dataBank, dataT);
 			if (!dataBank->invalid && dataBank->readLatency <= allowedDataReadLatency && dataBank->writeLatency <= allowedDataWriteLatency
 					&& dataBank->readDynamicEnergy <= allowedDataReadDynamicEnergy && dataBank->writeDynamicEnergy <= allowedDataWriteDynamicEnergy
 					&& dataBank->leakage <= allowedDataLeakage && dataBank->area <= allowedDataArea
